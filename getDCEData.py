@@ -1,9 +1,5 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Wed Jul 17 10:39:48 2019
 
-@author: tjiang
-"""
 import pandas as pd
 import time
 from lxml import etree
@@ -178,7 +174,7 @@ def getDCEClearParams(start_date,end_date):
                                 break
                             else:
                                 date=year+month+day
-                                df.to_excel(r'C:\Users\tjiang\Desktop\work\calcfee\FeeEsti\DCE\data\clearParams\ClearParams_%s.xls'%date,index=False)
+                                df.to_excel(r'path\ClearParams_%s.xls'%date,index=False)
                                 #time.sleep(3)
                                 print(date)
                             flag=True
@@ -189,6 +185,6 @@ def getDCEClearParams(start_date,end_date):
     driver.close()
 
 if __name__=='__main__':
-    getDCEClearParams('20190101','20190531')
+    getDCEClearParams('20180101','20190531')
     
     
